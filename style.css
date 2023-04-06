@@ -138,3 +138,11 @@ main article p {
     justify-content: space-around;
 }
 
+/* Footer component */
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-family: "Bree serif", "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+}
