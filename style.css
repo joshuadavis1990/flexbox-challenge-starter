@@ -37,3 +37,36 @@ nav a {
     color: #888;
 }
 
+/* Hero component */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #8980C2 url(/images/zebra-hero.jpg) 50% no-repeat;
+    background-size: cover;
+    padding: 2rem 0;
+}
+
+#hero h1, #hero a {
+    color: white;
+}
+
+#hero h1 {
+    font-family: "Bree serif", "Times New Roman", Times, serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 1rem 0;
+}
+
+#hero a {
+    text-decoration: none;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    padding: 0.75rem 1.25rem;
+}
+
+#hero img {
+    width: 66%;
+    border-radius: 50%;
+}
