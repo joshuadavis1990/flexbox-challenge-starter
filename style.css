@@ -11,6 +11,23 @@ body {
     flex-direction: column;
 }
 
+.outline-button {
+    text-decoration: none;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.white {
+    border: 1px solid white;
+    color: white;
+}
+
+.lilac {
+    border: 1px solid 8980C2;
+    color: 8980C2;
+}
+
 /* Header component */
 header {
     display: flex;
@@ -58,15 +75,43 @@ nav a {
     margin: 1rem 0;
 }
 
-#hero a {
-    text-decoration: none;
-    font-family: Lato, Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    border: 1px solid white;
-    padding: 0.75rem 1.25rem;
-}
-
 #hero img {
     width: 66%;
     border-radius: 50%;
+}
+
+/* Main content component */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Bree serif", "Times New Roman", Times, serif;
+}
+
+main h2 {
+    margin: 1rem 0 0;
+}
+
+main article  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+main article img {
+    width: 75%;
+    border-radius: 50%;
+    border: 4px solid #8980C2;
+}
+
+main article h3 {
+    margin: 1rem 0;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+main article p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
 }
