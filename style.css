@@ -56,12 +56,30 @@ nav a {
 
 /* Hero component */
 #hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #8980C2 url(/images/zebra-hero.jpg) 50% no-repeat;
     background-size: cover;
     padding: 2rem 0;
+}
+
+#hero * {
+    position: relative;
+    z-index: 1;
+}
+
+#hero:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
 }
 
 #hero h1, #hero a {
@@ -132,10 +150,10 @@ main article p {
     margin-bottom: 1rem;
 }
 
-#social-links > div {
+#social-links nav {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 /* Footer component */
@@ -145,4 +163,68 @@ footer {
     padding: 1.5rem;
     font-family: "Bree serif", "Times New Roman", Times, serif;
     font-size: 1.25rem;
+}
+
+/* *** TABLET STYLES - 800 is typical tablet width, 300-400 for phone *** */
+
+@media only screen and (min-width: 550px) {
+    header {
+        margin-top: 0.5rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #brand {
+        margin-left: 1rem;
+        display: inline-block;
+        width: 25%;
+        margin-bottom: 0rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 1rem;
+    }
+    main h2 {
+        width: 100%;
+        text-align: center;
+    }
+    main article {
+        width: 33.33%;
+    }
+    main article .outline-button {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #hero img {
+        width: 50%;
+    }
+}
+
+/* *** DESKTOP STYLES */
+
+@media only screen and (min-width: 1000px) {
+    header {
+        padding: 0.5rem 0 1rem; 
+        justify-content: space-between;
+    }
+    #brand {
+        width: 7%;
+    }
+    header nav {
+        width: auto;
+    }
+
+    header nav a {
+        margin-right: 2rem;
+    }
+    #hero img {
+        width: 20%;
+    }
 }
